@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grid.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+min_value = -1.0
+_data = [ Vector2( 0, -1 ), 0.0, 0.122078, 0, 0, Vector2( 0.514184, 0.0545455 ), 3.46845, 2.35945, 0, 1, Vector2( 0.914894, 1 ), 1.07315, 0.0, 0, 0 ]
+
+[node name="Grid" type="Node2D"]
+script = ExtResource( 1 )
+defaultTileColor = Color( 1, 1, 1, 1 )
+highlightTileColor = Color( 0.647059, 0.647059, 0.647059, 1 )
+groundColor = Color( 0.054902, 0.231373, 0.0117647, 1 )
+mountainColor = Color( 1, 1, 1, 1 )
+shallowSeaTileColor = Color( 0.219608, 0.776471, 0.92549, 1 )
+deepSeaTileColor = Color( 0.0117647, 0.0509804, 0.380392, 1 )
+maxRadius = 20
+curve = SubResource( 1 )
+size = 100.0
+spacing = 2.0

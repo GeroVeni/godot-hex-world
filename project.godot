@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Grid",
+"language": "GDScript",
+"path": "res://Grid.gd"
+}, {
+"base": "Reference",
+"class": "HexCoords",
+"language": "GDScript",
+"path": "res://HexCoords.gd"
+} ]
+_global_script_class_icons={
+"Grid": "",
+"HexCoords": ""
+}
+
+[application]
+
+config/name="HexWorld"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
