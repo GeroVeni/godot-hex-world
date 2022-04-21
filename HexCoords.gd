@@ -24,11 +24,15 @@ class BoundedHexRegion:
     self.yMin = int(floor(qMin.y))
     self.yMax = int(ceil(qMax.y))
 
-  func getXMin(y: int) -> int:
+  func getXMin(y: float) -> int:
     return int(floor(qMin.x - (y - qMin.y) / 2.0))
 
-  func getXMax(y: int) -> int:
+  func getXMax(y: float) -> int:
     return int(ceil(qMax.x - (y - qMax.y) / 2.0))
+
+  func hasPoint(point: Vector2):
+    if point.y < yMin || point.y > yMax: return false
+    return getXMin(point.y) <= point.x && point.x <= getXMax(point.y)
 
   func setCurrentY(y: int):
     currentY = y

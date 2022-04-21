@@ -157,7 +157,7 @@ func setBoundsRect(rect: Rect2):
 
 func despawnOutOfBoundTiles():
   for tile in tiles.keys():
-    if !boundsRect.has_point(hc.tileToWorldCoords(tile)):
+    if !hc.getBoundedHexRegion(boundsRect).hasPoint(tile):
       despawnTile(tile)
 
 func spawnInBoundTiles():
